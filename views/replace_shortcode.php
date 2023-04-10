@@ -1,5 +1,7 @@
 <div class="testimonials_slider">
-<?php foreach ( self::$model->get_list() as $item ): ?>
+<?php 
+
+foreach ( array_reverse(self::$model->get_list()) as $item ): ?>
            
                         <div itemscope itemtype="https://schema.org/Review" class="testimonials_slider-item">
                           <meta itemprop="datePublished" content="<?= $item->schema_date ?>"/>
